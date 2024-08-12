@@ -131,18 +131,18 @@ wildmasks := map[string]string{
     return networkA, broadcastA, cidr, netmasks[cidr], wildmasks[cidr]
 }
 
-func isIntPrime(num int) bool {
-    if num == 0 || num == 1 {
-        return false
-    }
-
-    for i:=2; i<num; i++ {
-        if num % i == 0 {
-             return false
-            }
-    }
-    return true
-}
+//func isIntPrime(num int) bool {
+//    if num == 0 || num == 1 {
+//        return false
+//    }
+//
+//    for i:=2; i<num; i++ {
+//        if num % i == 0 {
+//             return false
+//            }
+//    }
+//    return true
+//}
 
 //func ipCalc(ipcidr string) {
 //    
