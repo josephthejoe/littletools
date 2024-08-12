@@ -11,7 +11,7 @@ import (
 
     "github.com/gorilla/mux"
 
-    "github.com/josephthejoe/littletools/internal/handlers"
+//    "github.com/josephthejoe/littletools/internal/handlers"
     "github.com/josephthejoe/littletools/internal/tools"
 )
 
@@ -178,7 +178,7 @@ func main() {
             return
         }
 
-        check := isIntPrime(num)
+        check := tools.isIntPrime(num)
         w.Header().Set("Content-Type", "application/json")
         json.NewEncoder(w).Encode(map[string]bool{"check": check})
     }
@@ -200,7 +200,7 @@ func main() {
                 http.Error(w, "Internal Server Error", http.StatusInternalServerError)
                 return
             }
-            check := isIntPrime(num)
+            check := tools.isIntPrime(num)
             if check == false {
                 p = "the numer is NOT prime"
             } else {
