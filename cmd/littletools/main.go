@@ -8,11 +8,11 @@ import (
     "strconv"
     "encoding/json"
 //    "log"
+    "github.com/josephthejoe/littletools/internal/tools"
 
     "github.com/gorilla/mux"
 
 //    "github.com/josephthejoe/littletools/internal/handlers"
-    "github.com/josephthejoe/littletools/internal/tools"
 )
 
 type NetworkData struct {
@@ -178,7 +178,7 @@ func main() {
             return
         }
 
-        check := tools.isIntPrime(num)
+        check := tools.IsIntPrime(num)
         w.Header().Set("Content-Type", "application/json")
         json.NewEncoder(w).Encode(map[string]bool{"check": check})
     }
@@ -200,7 +200,7 @@ func main() {
                 http.Error(w, "Internal Server Error", http.StatusInternalServerError)
                 return
             }
-            check := tools.isIntPrime(num)
+            check := tools.IsIntPrime(num)
             if check == false {
                 p = "the numer is NOT prime"
             } else {

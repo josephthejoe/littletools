@@ -1,6 +1,6 @@
 package tools
 
-func isIntPrime(num int) bool {
+func IsIntPrime(num int) bool {
     if num == 0 || num == 1 {
         return false
     }
