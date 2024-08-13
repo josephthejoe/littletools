@@ -31,6 +31,6 @@ func main() {
     //router.PathPrefix("./web/static/").Handler(http.StripPrefix("./web/static/", http.FileServer(http.Dir("static"))))
 
     // Start the HTTP server on port 8080 using the router
-    fmt.Println("Server is listening on :8080...")
-    http.ListenAndServe(":8080", router)
+    fmt.Println("Server is listening on :80...")
+    http.ListenAndServe(":80", router)
 }
